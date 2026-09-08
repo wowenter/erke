@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Переход в WhatsApp</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '974545252326954');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1394433109415749&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script>
+    const wa = "https://chat.whatsapp.com/IqsGfM4DwIP8cU3S55pW9Z";
+
+    // Автоматический переход через 800 мс
+    setTimeout(() => {
+      window.location.href = wa;
+    }, 800);
+
+    // Событие Lead ТОЛЬКО при нажатии кнопки
+    function openWhatsApp() {
+      fbq('track', 'Lead');
+      window.location.href = wa;
+    }
+  </script>
+
+</head>
+
+<body style="font-family:sans-serif;text-align:center;padding:40px;">
+
+  <h2>Переходим в WhatsApp…</h2>
+
+  <p>
+    Если WhatsApp не открылся автоматически, нажмите кнопку ниже.
+  </p>
+
+  <a href="#"
+     onclick="openWhatsApp(); return false;"
+     style="
+      display:inline-block;
+      background:#25D366;
+      color:white;
+      padding:16px 28px;
+      border-radius:10px;
+      text-decoration:none;
+      font-size:18px;
+      font-weight:bold;
+     ">
+     Открыть WhatsApp
+  </a>
+
+</body>
+</html>
