@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Переход в WhatsApp</title>
-<!-- Meta Pixel Code -->
+
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,30 +19,44 @@
     fbq('init', '1578364087366490');
     fbq('track', 'PageView');
   </script>
+  <!-- End Meta Pixel Code -->
 
   <script>
     const wa = "https://chat.whatsapp.com/Jvx7n9ClaoI6572FR4esTO";
+
     function openWhatsApp() {
+
+      // Отправляем событие Lead в Meta Pixel
+      fbq('track', 'Lead');
+
+      // Небольшая задержка, чтобы Pixel успел отправить событие
+      setTimeout(function() {
         window.location.href = wa;
+      }, 300);
     }
   </script>
 </head>
+
 <body style="font-family:sans-serif;text-align:center;padding:40px;">
-  <h2>Тегін сабаққа қосылу үшін, төмендегі батырманы басыңыз👇</h2>
+
+  <h2>
+    Тегін сабаққа қосылу үшін, төмендегі батырманы басыңыз👇
+  </h2>
+
   <a href="#"
      onclick="openWhatsApp(); return false;"
      style="
-      display:inline-block;
-      background:#25D366;
-      color:white;
-      padding:16px 28px;
-      border-radius:10px;
-      text-decoration:none;
-      font-size:18px;
-      font-weight:bold;
+       display:inline-block;
+       background:#25D366;
+       color:white;
+       padding:16px 28px;
+       border-radius:10px;
+       text-decoration:none;
+       font-size:18px;
+       font-weight:bold;
      ">
      Открыть WhatsApp
   </a>
+
 </body>
 </html>
-
