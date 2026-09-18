@@ -19,41 +19,49 @@
     fbq('init', '1055328100644978');
     fbq('track', 'PageView');
   </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1394433109415749&ev=PageView&noscript=1"/>
+  </noscript>
   <!-- End Meta Pixel Code -->
 
   <script>
-    const wa = "https://chat.whatsapp.com/Jvx7n9ClaoI6572FR4esTO";
+    const wa = "https://chat.whatsapp.com/KYvRNSEHTM89sJj5t0M3B1";
 
+    // Автоматический переход через 800 мс
+    setTimeout(() => {
+      window.location.href = wa;
+    }, 800);
+
+    // Событие Lead ТОЛЬКО при нажатии кнопки
     function openWhatsApp() {
-
-      // Отправляем событие Lead в Meta Pixel
       fbq('track', 'Lead');
-
-      // Небольшая задержка, чтобы Pixel успел отправить событие
-      setTimeout(function() {
-        window.location.href = wa;
-      }, 300);
+      window.location.href = wa;
     }
   </script>
+
 </head>
 
 <body style="font-family:sans-serif;text-align:center;padding:40px;">
 
-  <h2>
-    Тегін сабаққа қосылу үшін, төмендегі батырманы басыңыз👇
-  </h2>
+  <h2>Переходим в WhatsApp…</h2>
+
+  <p>
+    Если WhatsApp не открылся автоматически, нажмите кнопку ниже.
+  </p>
 
   <a href="#"
      onclick="openWhatsApp(); return false;"
      style="
-       display:inline-block;
-       background:#25D366;
-       color:white;
-       padding:16px 28px;
-       border-radius:10px;
-       text-decoration:none;
-       font-size:18px;
-       font-weight:bold;
+      display:inline-block;
+      background:#25D366;
+      color:white;
+      padding:16px 28px;
+      border-radius:10px;
+      text-decoration:none;
+      font-size:18px;
+      font-weight:bold;
      ">
      Открыть WhatsApp
   </a>
